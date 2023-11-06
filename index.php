@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="script.js"></script>
     <title>Hackers Poulette</title>
 </head>
 <body>
@@ -53,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 
-<form method="post" action="index.php">
+<form id="contactForm" method="post" action="index.php">
 
     <label class="label" for="name">Name:</label><br>
     <input type="text" id="name" name="name" placeholder="Your name" aria-label="Name" required><br>
@@ -113,6 +114,7 @@ if (!empty($error)) {
 <?php
 print_r($_POST);
 ?>
+
 
 </body>
 </html>
