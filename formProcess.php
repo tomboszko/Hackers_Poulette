@@ -38,7 +38,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 
-
 // If no errors, send email...
 $mail = new PHPMailer\PHPMailer\PHPMailer(true);
 
@@ -61,6 +60,13 @@ $mail = new PHPMailer\PHPMailer\PHPMailer(true);
             $mail->AltBody = ' . $message . ';
 
             $mail->send();
+
+            echo '<button onclick="goBack()">Go Back</button>';
+            echo '<script>
+                function goBack() {
+                    window.history.back();
+                }
+                 </script>';
 
            // echo 'Message has been sent';
         } catch (Exception $e) {

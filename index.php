@@ -12,6 +12,8 @@
     <h1>Contact form</h1>
 </header>
     
+<main>
+    <p>Fill in the form below to contact us.</p>
 
 <form id="contactForm" method="post" action="formProcess.php">
 
@@ -61,7 +63,7 @@
     <input type="submit" value="Submit">
 </form>
 
-
+</main>
 
 
 </body>
