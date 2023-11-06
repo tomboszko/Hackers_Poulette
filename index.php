@@ -13,6 +13,9 @@
     
 <?php
 
+// set variables to empty values
+$name = $lastname = $email = $gender = $country = $subject = $message = '';
+// set error variable
 $error = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
