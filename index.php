@@ -62,6 +62,8 @@
 </form>
 
 <?php
+// require PHPMailer
+require 'vendor/autoload.php';
 //error reporting
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -99,12 +101,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-print_r($_POST);
+
+
+// If no errors, send email...
+$mail = new PHPMailer\PHPMailer\PHPMailer(true);
+
+        try {
+            //Server settings
+            $mail->isSMTP();                                      // Set mailer to use SMTP
+            $mail->Host = 'localhost';                            // Specify main and backup SMTP servers
+            $mail->SMTPAuth = false;                              // Disable SMTP authentication
+            $mail->Port = 1025;                                   // TCP port to connect to
+
+            //Recipients
+            $mail->setFrom($email, $name);
+            $mail->addAddress('hacker.poulettes@gmail.com', 'Hacker Poulettes');     // Add a recipient
+            $mail->addReplyTo('info@example.com', 'Information');
+
+            //Content
+            $mail->isHTML(true);                                  // Set email format to HTML
+            $mail->Subject = $_POST['subject'];
+            $mail->Body    = 'This is the HTML message body <b>' . $message . '</b>';
+            $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+            $mail->send();
+            echo 'Message has been sent';
+        } catch (Exception $e) {
+            echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+        }
+
+        print_r($_POST);
+    
+
+
 ?>
 
-</body>
 
 </body>
 </html>
-
 
