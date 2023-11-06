@@ -9,10 +9,11 @@
 <body>
 
 <header>
-    <h1>Contact form</h1>
+    <h1>Hackers Poulette</h1>
 </header>
     
 <main>
+    <h2>Contact form</h2>
     <p>Fill in the form below to contact us.</p>
 
 <form id="contactForm" method="post" action="formProcess.php">
@@ -35,7 +36,7 @@
     <input type="email" id="email" name="email" placeholder="name@xyz.com" aria-label="Email" required><br>
 
     <label class="label" for="country">Country:</label><br>
-<select id="country" name="country" aria-label="Country" required>
+    <select id="country" name="country" aria-label="Country" required>
     <option value="">Select your country</option>
     <?php
     $countries = array(
@@ -46,7 +47,7 @@
         echo '<option value="' . $country . '">' . $country . '</option>';
     }
     ?>
-</select><br>
+    </select><br>
 
     <label class="label" for="subject">Subject:</label><br>
     <select id="subject" name="subject" aria-label="Subject">
@@ -65,7 +66,9 @@
 
 </main>
 
-
+<footer>
+    <p>© 2020 - Hackers Poulette</p>
+</footer>
 </body>
 </html>
 
