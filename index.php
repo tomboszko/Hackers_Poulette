@@ -124,12 +124,13 @@ $mail = new PHPMailer\PHPMailer\PHPMailer(true);
             $mail->AltBody = ' . $message . ';
 
             $mail->send();
-            echo 'Message has been sent';
+
+           // echo 'Message has been sent';
         } catch (Exception $e) {
             echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
         }
 
-        print_r($_POST);
+         //print_r($_POST);
     
 
 
