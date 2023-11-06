@@ -58,9 +58,9 @@ $mail = new PHPMailer\PHPMailer\PHPMailer(true);
             $mail->Subject = $_POST['subject'];
             $mail->Body    = 'This is the HTML message body: <b>' . $message . '</b>';
             $mail->AltBody = ' . $message . ';
-
+            //send email
             $mail->send();
-
+            //display go back button
             echo '<button onclick="goBack()">Go Back</button>';
             echo '<script>
                 function goBack() {
