@@ -64,12 +64,11 @@
 <?php
 // require PHPMailer
 require 'vendor/autoload.php';
-//error reporting
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
+
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
     // Check if honeypot field is filled
     if (!empty($_POST['honeypot'])) {
         die('Spam detected');
@@ -114,15 +113,15 @@ $mail = new PHPMailer\PHPMailer\PHPMailer(true);
             $mail->Port = 1025;                                   // TCP port to connect to
 
             //Recipients
-            $mail->setFrom($email, $name);
+            $mail->setFrom($email, $lastname);
             $mail->addAddress('hacker.poulettes@gmail.com', 'Hacker Poulettes');     // Add a recipient
             $mail->addReplyTo('info@example.com', 'Information');
 
             //Content
             $mail->isHTML(true);                                  // Set email format to HTML
             $mail->Subject = $_POST['subject'];
-            $mail->Body    = 'This is the HTML message body <b>' . $message . '</b>';
-            $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+            $mail->Body    = 'This is the HTML message body: <b>' . $message . '</b>';
+            $mail->AltBody = ' . $message . ';
 
             $mail->send();
             echo 'Message has been sent';
