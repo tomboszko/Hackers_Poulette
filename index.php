@@ -13,8 +13,7 @@
 </header>
     
 
-
-<form id="contactForm" method="post" action="index.php">
+<form id="contactForm" method="post" action="processForm.php">
 
     <label class="label" for="name">Name:</label><br>
     <input type="text" id="name" name="name" placeholder="Your name" aria-label="Name" required><br>
