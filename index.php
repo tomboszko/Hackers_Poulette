@@ -13,7 +13,7 @@
 </header>
     
 
-<form id="contactForm" method="post" action="processForm.php">
+<form id="contactForm" method="post" action="index.php">
 
     <label class="label" for="name">Name:</label><br>
     <input type="text" id="name" name="name" placeholder="Your name" aria-label="Name" required><br>
@@ -60,6 +60,49 @@
     <input type="text" id="honeypot" name="honeypot" style="display: none;"><br>
     <input type="submit" value="Submit">
 </form>
+
+<?php
+//error reporting
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+// Check if form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Check if honeypot field is filled
+    if (!empty($_POST['honeypot'])) {
+        die('Spam detected');
+    }
+
+    // set variables to empty values
+    $name = trim(htmlspecialchars($_POST['name']));
+    $lastname = trim(htmlspecialchars($_POST['lastname']));
+    $email = trim(htmlspecialchars($_POST['email']));
+    $message = trim(htmlspecialchars($_POST['message']));
+
+    // set error variable
+    $error = '';
+
+    // Validate fields...
+    if (empty($name) || empty($lastname) || empty($email) || empty($message)) {
+        $error = 'All fields are required';
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error = 'Invalid email format';
+    } elseif (preg_match('/[^a-z\s-]/i', $name) || preg_match('/[^a-z\s-]/i', $lastname)) {
+        $error = 'Name and lastname can only contain letters, spaces, and hyphens';
+    }
+
+    // If no errors, display success message...
+    if (empty($error)) {
+        echo '<script>alert("Thank you for your message, we will respond you as soon as possible !");</script>';
+    } else {
+        echo '<p>' . $error . '</p>';
+    }
+}
+
+print_r($_POST);
+?>
+
+</body>
 
 </body>
 </html>
