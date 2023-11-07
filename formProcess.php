@@ -2,8 +2,6 @@
 // require PHPMailer
 require 'vendor/autoload.php';
 
-
-
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -11,16 +9,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($_POST['honeypot'])) {
         die('Spam detected');
     }
-
     // set variables to empty values
     $name = trim(htmlspecialchars($_POST['name']));
     $lastname = trim(htmlspecialchars($_POST['lastname']));
     $email = trim(htmlspecialchars($_POST['email']));
     $message = trim(htmlspecialchars($_POST['message']));
-
     // set error variable
     $error = '';
-
     // Validate fields...
     if (empty($name) || empty($lastname) || empty($email) || empty($message)) {
         $error = 'All fields are required';
@@ -32,12 +27,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // If no errors, display success message...
     if (empty($error)) {
-        echo '<script>alert("Thank you for your message, we will respond you as soon as possible !");</script>';
+        echo '<p>Thank you for your message, we will respond you as soon as possible !</p>';
+        //display go back button
+        echo '<button onclick="goBack()">Home</button>';
+        echo '<script>
+            function goBack() {
+                window.history.back();
+            }
+             </script>';
     } else {
         echo '<p>' . $error . '</p>';
     }
 }
-
 
 // If no errors, send email...
 $mail = new PHPMailer\PHPMailer\PHPMailer(true);
@@ -61,19 +62,12 @@ $mail = new PHPMailer\PHPMailer\PHPMailer(true);
             $mail->AltBody = ' . $message . ';
             //send email
             $mail->send();
-            //display go back button
-            echo '<button onclick="goBack()">Go Back</button>';
-            echo '<script>
-                function goBack() {
-                    window.history.back();
-                }
-                 </script>';
-
            // echo 'Message has been sent';
         } catch (Exception $e) {
             echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
         }
 
+        // function to see what is in $_POST
          //print_r($_POST);
     
 
