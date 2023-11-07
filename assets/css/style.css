@@ -92,5 +92,22 @@ body {
 }
 
 #submitButton {
+  display: block;
   background-color: #0d8187;
+  color: #FFF;
+  font-weight: 900;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#submitButton:hover {
+  background-color: #095558;
+}
+
+#submitButton:active {
+  scale: 0.95;
 }/*# sourceMappingURL=style.css.map */
