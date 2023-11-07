@@ -24,14 +24,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     // If no errors, display success message...
     if (empty($error)) {
+        echo '<div id="success">';
         echo '<p>Thank you for your message, we will respond you as soon as possible !</p>';
         //display go back button
         echo '<button onclick="goBack()">Home</button>';
-        echo '<script>
-            function goBack() {
-                window.history.back();
-            }
-             </script>';
+echo '<script>
+    function goBack() {
+        window.history.back();
+    }
+     </script>';
+echo '</div>';
     } else {
         echo '<p>' . $error . '</p>';
     }
