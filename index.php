@@ -84,7 +84,7 @@
 </main>
 
 <footer>
-    <p>© 2020 - Hackers Poulette</p>
+    <p>All rights reserved by the Toma-Cola Company</p>
 </footer>
 </body>
 </html>
