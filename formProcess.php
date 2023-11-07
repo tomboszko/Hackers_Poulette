@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <href rel="stylesheet" href="assets/css/style.min.css">
-    <title>Thank You !</title>
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <title>Thank You!</title>
 </head>
 <body>
     
-</body>
-</html>
+
 
 <?php
 // require PHPMailer
@@ -40,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo '<div id="success">';
         echo '<p>Thank you for your message, we will respond you as soon as possible !</p>';
         //display go back button
-        echo '<button onclick="goBack()">Home</button>';
+        echo '<button id="btnDone" onclick="goBack()">Home</button>';
 echo '<script>
     function goBack() {
         window.history.back();
@@ -80,7 +79,8 @@ $mail = new PHPMailer\PHPMailer\PHPMailer(true);
 
         // function to see what is in $_POST
          //print_r($_POST);
-    
-
 
 ?>
+
+</body>
+</html>

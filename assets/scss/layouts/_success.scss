@@ -1,0 +1,31 @@
+#success {
+    background-color: $color-primary;
+    color: $color-secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#btnDone {
+        display: block;
+        background-color: $color-secondary;
+        color: $color-tertiary;
+        font-weight: 900;
+        border: none;
+        border-radius: 4px;
+        padding: 0.5rem;
+        cursor: pointer;
+        margin: {
+            right: auto;
+            left: auto; 
+            top: 2rem;
+        }
+    }
+    #btnDone:hover {
+        background-color: darken($color-secondary, 10%);
+    }
+    #btnDone:active {
+        scale: 0.95;
+    }

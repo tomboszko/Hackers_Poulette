@@ -120,4 +120,36 @@ body {
 
 footer {
   text-align: center;
+}
+
+#success {
+  background-color: #0d8187;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#btnDone {
+  display: block;
+  background-color: #FFF;
+  color: #303030;
+  font-weight: 900;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 2rem;
+}
+
+#btnDone:hover {
+  background-color: #e6e6e6;
+}
+
+#btnDone:active {
+  scale: 0.95;
 }/*# sourceMappingURL=style.css.map */
