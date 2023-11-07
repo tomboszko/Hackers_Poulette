@@ -54,7 +54,43 @@ table {
   font-weight: normal;
   font-style: normal;
 }
-h1 {
-  color: red;
-  font-family: "bellota-regular";
+body {
+  width: 100vw;
+  background-color: #0d8187;
+  color: #FFF;
+  font-family: "Bellota-Regular";
+}
+
+#contactUs {
+  width: 375px;
+  background-color: #303030;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#formTitle {
+  text-align: center;
+  font-size: 1, 5rem;
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-color: #0d8187;
+  text-decoration-thickness: 2px;
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#submitButton {
+  background-color: #0d8187;
 }/*# sourceMappingURL=style.css.map */
