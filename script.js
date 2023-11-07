@@ -25,19 +25,27 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     var message = document.getElementById('message').value;
 
     if (!validateName(name) || !validateName(lastname)) {
-        alert("Name and lastname cannot contain numbers or special characters.");
+        document.getElementById('nameError').textContent = "Name and lastname cannot contain numbers or special characters.";
         event.preventDefault();
+    } else {
+        document.getElementById('nameError').textContent = "";
     }
     if (!validateEmail(email)) {
-        alert("Invalid email.");
+        document.getElementById('emailError').textContent = "Invalid email.";
         event.preventDefault();
+    } else {
+        document.getElementById('emailError').textContent = "";
     }
     if (!validateCountry(country)) {
-        alert("Select a country.");
+        document.getElementById('countryError').textContent = "Select a country.";
         event.preventDefault();
+    } else {
+        document.getElementById('countryError').textContent = "";
     }
     if (!validateMessage(message)) {
-        alert("Message cannot be empty.");
+        document.getElementById('messageError').textContent = "Message cannot be empty.";
         event.preventDefault();
+    } else {
+        document.getElementById('messageError').textContent = "";
     }
 });

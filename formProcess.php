@@ -1,10 +1,8 @@
 <?php
 // require PHPMailer
 require 'vendor/autoload.php';
-
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
     // Check if honeypot field is filled
     if (!empty($_POST['honeypot'])) {
         die('Spam detected');
@@ -24,7 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } elseif (preg_match('/[^a-z\s-]/i', $name) || preg_match('/[^a-z\s-]/i', $lastname)) {
         $error = 'Name and lastname can only contain letters, spaces, and hyphens';
     }
-
     // If no errors, display success message...
     if (empty($error)) {
         echo '<p>Thank you for your message, we will respond you as soon as possible !</p>';
@@ -39,7 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo '<p>' . $error . '</p>';
     }
 }
-
 // If no errors, send email...
 $mail = new PHPMailer\PHPMailer\PHPMailer(true);
 

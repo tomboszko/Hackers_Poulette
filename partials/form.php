@@ -5,10 +5,12 @@
     <form id="contactForm" method="post" action="formProcess.php" autocomplete="on">
 
         <label class="label" for="name">Name:</label><br>
-        <input type="text" id="name" name="name" placeholder="Your name" aria-label="Name" required><br>
+        <input type="text" id="name" name="name" placeholder="Your name" aria-label="Name" required>
+        <span id="nameError" style="color: red;"></span><br>
 
         <label class="label" for="lastname">Last Name:</label><br>
-        <input type="text" id="lastname" name="lastname" placeholder="Your lastname" aria-label="Last Name" required><br>
+        <input type="text" id="lastname" name="lastname" placeholder="Your lastname" aria-label="Last Name" required>
+        <span id="lastnameError" style="color: red;"></span><br>
 
         <label class="label" for="gender">Gender:</label><br>
         <select id="gender" name="gender" aria-label="Gender" required>
@@ -16,10 +18,12 @@
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="other">Other</option>
-        </select><br>
+        </select>
+        <span id="genderError" style="color: red;"></span><br>
 
         <label class="label" for="email">Email:</label><br>
-        <input type="email" id="email" name="email" placeholder="name@xyz.com" aria-label="Email" required><br>
+        <input type="email" id="email" name="email" placeholder="name@xyz.com" aria-label="Email" required>
+        <span id="emailError" style="color: red;"></span><br>
 
         <label class="label" for="country">Country:</label><br>
         <select id="country" name="country" aria-label="Country" required>
@@ -33,17 +37,20 @@
             echo '<option value="' . $country . '">' . $country . '</option>';
         }
         ?>
-        </select><br>
+        </select>
+        <span id="countryError" style="color: red;"></span><br>
 
         <label class="label" for="subject">Subject:</label><br>
         <select id="subject" name="subject" aria-label="Subject">
             <option value="Other">Other</option>
             <option value="Product">Product</option>
             <option value="Delivery">Delivery</option>
-        </select><br>
+        </select>
+        <span id="subjectError" style="color: red;"></span><br>
 
         <label class="label" for="message">Message:</label><br>
-        <textarea id="message" name="message" placeholder="Your message..." aria-label="Message" required></textarea><br>
+        <textarea id="message" name="message" placeholder="Your message..." aria-label="Message" required></textarea>
+        <span id="messageError" style="color: red;"></span><br>
 
         <!--Honeypot field-->
         <input type="text" id="honeypot" name="honeypot" style="display: none;"><br>
