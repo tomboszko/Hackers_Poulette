@@ -3,6 +3,7 @@
 require 'vendor/autoload.php';
 
 
+
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -73,7 +74,7 @@ $mail = new PHPMailer\PHPMailer\PHPMailer(true);
             echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
         }
 
-         //print_r($_POST);
+         print_r($_POST);
     
 
 
