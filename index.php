@@ -10,19 +10,21 @@
 <body>
 
 <header>
-    <h1>Hackers Poulette</h1>
+    
     <div id="homeImg">
-    <img src="assets/picture/hackers-poulette-logo.png" alt="logo" width="150">
+    
 </div>
-    <h2>Who are we?</h2>
-    <p>Hackers Poulette is a company that sells Raspberry Pi kits and accessories. We are based in Belgium, but we ship worldwide.</p>
-    <p>Our mission is to provide you with the best Raspberry Pi equipment at the best price.</p>
 
 </header>
     
 <main>
 <div id="contactUs">
-    <p id="formTitle">Fill in the form below to contact us.</p>
+    <div id="contactUsTitle">
+        
+        <img src="assets/picture/hackers-poulette-logo.png" alt="logo" width="100">
+        <p id="formTitle">Fill in the form below to contact us.</p>
+    </div>
+
     <form id="contactForm" method="post" action="formProcess.php" autocomplete="on">
 
         <label class="label" for="name">Name:</label><br>

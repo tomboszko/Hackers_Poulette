@@ -54,6 +54,13 @@ table {
   font-weight: normal;
   font-style: normal;
 }
+#contactUsTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 body {
   width: 100vw;
   background-color: #0d8187;
@@ -80,7 +87,6 @@ body {
   text-decoration: underline;
   text-decoration-color: #0d8187;
   text-decoration-thickness: 2px;
-  margin-bottom: 1rem;
 }
 
 .label {
@@ -110,4 +116,8 @@ body {
 
 #submitButton:active {
   scale: 0.95;
+}
+
+footer {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
