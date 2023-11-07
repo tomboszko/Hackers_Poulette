@@ -15,7 +15,7 @@
     
 <main>
     <?php
-    require 'partials/home.php';
+   /// require 'partials/home.php';
     require 'partials/form.php';
     ?>
 
