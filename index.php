@@ -9,19 +9,14 @@
 </head>
 <body>
 
-<header>
-    
-    <div id="homeImg">
-    
-</div>
 
-</header>
     
 <main>
+<div id="homeImg">
+        <figure id="logo"><img src="assets/picture/hackers-poulette-logo.png" alt="logo" width="200px"></figure>
+</div>
 <div id="contactUs">
     <div id="contactUsTitle">
-        
-        <img src="assets/picture/hackers-poulette-logo.png" alt="logo" width="100">
         <p id="formTitle">Fill in the form below to contact us.</p>
     </div>
 
@@ -51,11 +46,10 @@
         <label class="label" for="country">Country:</label><br>
         <select id="country" name="country" aria-label="Country" required>
         <option value="">Select your country</option>
-        <?php
+        <?php // PHP code to generate the list of countries (made it manual)
         $countries = array(
             "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Saudi Arabia", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belgium", "Belize", "Benin", "Bhutan", "Belarus", "Myanmar", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Chile", "China", "Cyprus", "Colombia", "Comoros", "North Korea", "South Korea", "Costa Rica", "Ivory Coast", "Croatia", "Cuba", "Denmark", "Djibouti", "Dominica", "Egypt", "United Arab Emirates", "Ecuador", "Eritrea", "Spain", "Eswatini", "Estonia", "United States", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Equatorial Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Cook Islands", "Marshall Islands", "India", "Indonesia", "Iraq", "Iran", "Ireland", "Iceland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kyrgyzstan", "Kiribati", "Kuwait", "Laos", "Lesotho", "Latvia", "Lebanon", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "North Macedonia", "Madagascar", "Malaysia", "Malawi", "Maldives", "Mali", "Malta", "Morocco", "Mauritius", "Mauritania", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Mozambique", "Namibia", "Nauru", "Nepal", "Nicaragua", "Niger", "Nigeria", "Niue", "Norway", "New Zealand", "Oman", "Uganda", "Uzbekistan", "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Netherlands", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Central African Republic", "Dominican Republic", "Republic of the Congo", "Czech Republic", "Romania", "United Kingdom", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "San Marino", "Solomon Islands", "El Salvador", "Samoa", "São Tomé and Príncipe", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Somalia", "Sudan", "South Sudan", "Sri Lanka", "Sweden", "Switzerland", "Suriname", "Syria", "Tajikistan", "Tanzania", "Chad", "Thailand", "East Timor", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkmenistan", "Turkey", "Tuvalu", "Ukraine", "Uruguay", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe",
         );
-
         foreach ($countries as $country) {
             echo '<option value="' . $country . '">' . $country . '</option>';
         }
@@ -83,9 +77,7 @@
 
 </main>
 
-<footer>
-    <p>All rights reserved by the Toma-Cola Company</p>
-</footer>
+
 </body>
 </html>
 

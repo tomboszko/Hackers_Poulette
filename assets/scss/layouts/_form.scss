@@ -11,12 +11,16 @@
     padding: 1rem;
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: block;
+    z-index: 10;
 }
 
 #formTitle {
     text-align: center;
-    font-size: 1,5rem;
-    font-weight: 900;
+    font: {
+        size: 1,5rem;
+        weight: 900;
+    }
     text-decoration: underline;
     text-decoration-color: $color-primary;
     text-decoration-thickness: 2px;
@@ -25,10 +29,14 @@
 
 .label {
     display: inline-block;
-    font-size: 0.8rem;
-    font-weight: 700;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    font: {
+        size: 0.8rem;
+        weight: 700;
+    }
+    margin: {
+        top: 5px;
+        bottom: 5px;
+    }
 }
 
 #submitButton {

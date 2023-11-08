@@ -68,6 +68,17 @@ body {
   font-family: "Bellota-Regular";
 }
 
+#homeImg {
+  width: 500px;
+  height: 500px;
+  padding-right: auto;
+  padding-left: auto;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
 #contactUs {
   width: 375px;
   background-color: #303030;
@@ -78,6 +89,8 @@ body {
   padding: 1rem;
   border-radius: 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: block;
+  z-index: 10;
 }
 
 #formTitle {

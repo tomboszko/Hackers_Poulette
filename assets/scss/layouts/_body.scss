@@ -4,3 +4,16 @@ body {
     color: $color-secondary;
     font-family: 'Bellota-Regular';
 }
+
+
+
+#homeImg {
+    width: 500px;
+    height: 500px;
+    padding-right: auto;
+    padding-left: auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
