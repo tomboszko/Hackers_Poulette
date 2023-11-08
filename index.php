@@ -9,12 +9,8 @@
 </head>
 <body>
 
-
-    
 <main>
-<div id="homeImg">
-        <figure id="logo"><img src="assets/picture/hackers-poulette-logo.png" alt="logo" width="200px"></figure>
-</div>
+
 <div id="contactUs">
     <div id="contactUsTitle">
         <p id="formTitle">Fill in the form below to contact us.</p>

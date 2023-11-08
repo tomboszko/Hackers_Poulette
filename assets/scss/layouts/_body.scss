@@ -3,17 +3,18 @@ body {
     background-color: $color-primary;
     color: $color-secondary;
     font-family: 'Bellota-Regular';
+
 }
 
-
-
-#homeImg {
-    width: 500px;
-    height: 500px;
-    padding-right: auto;
-    padding-left: auto;
-    display: block;
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: -1;
+    background-image: url('assets/picture/hackers-poulette-logo.png');
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
 }
