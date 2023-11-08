@@ -11,6 +11,7 @@
 
 
 <?php
+session_start(); // start session (only way found to reset the form when goback button is clicked)
 // require PHPMailer
 require 'vendor/autoload.php';
 // Check if form is submitted
@@ -41,16 +42,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo '<p>Thank you for your message, we will respond you as soon as possible !</p>';
         //display go back button
         echo '<button id="btnDone" onclick="goBack()">Home</button>';
-echo '<script>
-    function goBack() {
-        window.history.back();
-    }
-     </script>';
-echo '</div>';
-    } else {
-        echo '<p>' . $error . '</p>';
-    }
+        echo '<script>
+            function goBack() {
+                window.history.back();
+            }
+            </script>';
+        echo '</div>';
+
+            } else {
+                echo '<p>' . $error . '</p>';
+            }
 }
+// If no errors, set session variable to true...
+if (empty($error)) {
+    $_SESSION['submitted'] = true;
+}
+// If session variable is set, reset form...
+if (isset($_SESSION['submitted'])) {
+    unset($_SESSION['submitted']);
+    echo '<script>document.getElementById("contactForm").reset();</script>';
+}
+
 // If no errors, send email...
 $mail = new PHPMailer\PHPMailer\PHPMailer(true);
 

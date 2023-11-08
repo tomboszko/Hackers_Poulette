@@ -3,7 +3,6 @@
 window.onload = function() {
     document.getElementById("contactForm").reset();
 }
-
 // script to prevent form submission if fields are not valid
 function validateName(name) {
     var re = /^[A-Za-z\s]+$/; // only letters and spaces
